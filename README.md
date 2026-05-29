@@ -101,3 +101,19 @@ Recommended starting points:
 * `docs/adr/ADR-003-use-rabbitmq-and-document-kafka.md`
 * `docs/adr/ADR-004-add-couchbase-as-nosql-learning-track.md`
 * `docs/adr/ADR-005-use-kubernetes-and-argocd.md`
+
+## Makefile Commands
+
+BeatFlow uses a root `Makefile` to standardize common local development commands.
+
+Available commands:
+
+```bash
+make help
+make test
+make lint
+make fmt
+make docker-up
+make docker-down
+make migrate-up
+make migrate-down
