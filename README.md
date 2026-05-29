@@ -1,120 +1,180 @@
-# BeatFlow
+# BeatFlow Documentation Pack — Updated
 
-BeatFlow is a production-grade, microservice-based Go backend system for a beat marketplace platform.
-
-The project is designed as a long-term backend engineering portfolio project. It focuses on Go, Fiber, microservices, PostgreSQL, Redis, RabbitMQ, Elasticsearch, AWS S3, Docker, Kubernetes, CI/CD, observability, security, testing, and resilience patterns.
-
-## Repository Structure
-
-```txt
 beatflow/
 ├── apps/
 │   └── auth-service/
+│       ├── cmd/
+│       │   └── api/
+│       │       └── main.go
+│       ├── internal/
+│       │   ├── config/
+│       │   ├── handler/
+│       │   ├── service/
+│       │   └── repository/
+│       └── go.mod
+│
 ├── packages/
 │   └── go/
 │       ├── config/
+│       │   ├── config.go
+│       │   └── go.mod
 │       └── logger/
-├── docs/
+│           ├── logger.go
+│           └── go.mod
+│
 ├── deployments/
+│   ├── docker-compose/
+│   │   └── docker-compose.yml
+│   └── k8s/
+│
+├── docs/
+│
 ├── scripts/
-├── README.md
-└── .gitignore
-```
+│
+├── Makefile
+├── go.work
+├── .gitignore
+└── README.md
+  
 
-## Directory Overview
+This package contains the updated Markdown documentation for BeatFlow.
 
-### `apps/`
+  
 
-Contains deployable backend applications and microservices.
+The scope now includes the full modern backend / production-ready microservice learning track:
 
-In this repository, `apps/` acts as the services directory.
+  
 
-Initial service:
+- Go + Fiber REST APIs
 
-* `auth-service`: handles authentication and identity-related features.
+- Microservices
 
-Future services may include:
+- PostgreSQL + pgx + Goose
 
-* `user-service`
-* `beat-service`
-* `file-service`
-* `marketplace-service`
-* `order-service`
-* `payment-service`
-* `notification-service`
-* `analytics-service`
-* `messaging-service`
-* `admin-service`
+- Redis
 
-### `packages/go/`
+- RabbitMQ
 
-Contains shared Go packages used by multiple services.
+- Kafka comparison / optional event streaming track
 
-In this repository, `packages/go/` acts as the shared Go package directory.
+- Couchbase / NoSQL experiment track
 
-Initial shared packages:
+- Elasticsearch
 
-* `config`: shared configuration loading utilities.
-* `logger`: shared structured logging utilities.
+- AWS S3
 
-Shared packages should only contain technical concerns such as configuration, logging, middleware, errors, validation helpers, and observability helpers.
+- Docker
 
-Domain-specific business logic should stay inside the owning service.
+- Docker Compose
 
-### `docs/`
+- Kubernetes
 
-Contains project documentation.
+- ArgoCD / GitOps
 
-Examples:
+- CI/CD
 
-* product documentation
-* architecture documentation
-* development process documentation
-* ADRs
-* security strategy
-* testing strategy
-* observability strategy
-* deployment strategy
+- Prometheus
 
-### `deployments/`
+- Grafana
 
-Contains deployment-related files.
+- OpenTelemetry
 
-Examples:
+- Jaeger
 
-* Docker Compose files
-* Kubernetes manifests
-* ArgoCD GitOps manifests
-* environment-specific deployment configuration
+- Retry / timeout / circuit breaker / rate limiting
 
-### `scripts/`
+- Context propagation
 
-Contains helper scripts for local development, testing, automation, and operations.
+- Graceful shutdown
 
-Examples:
+- Static analysis
 
-* local setup scripts
-* migration scripts
-* test scripts
-* formatting/linting scripts
-* CI helper scripts
+- Security scanning
 
-## Current Sprint
+- Container hardening
 
-Sprint 1 focuses on creating the initial project foundation before implementing business features.
+- Testing
 
-Initial foundation goals:
+- Load testing
 
-* initialize Git repository
-* create root README
-* add `.gitignore`
-* create base monorepo folder structure
-* create application/service directory
-* create shared package directory
-* create documentation directory
-* create deployment directory
-* create scripts directory
-* document repository structure
+- Architecture Decision Records
 
-```
-```
+  
+
+## Files
+
+  
+
+### Product
+
+  
+
+- `docs/product/project-vision.md`
+
+- `docs/product/product-requirements.md`
+
+  
+
+### Process
+
+  
+
+- `docs/process/development-methodology.md`
+
+- `docs/process/definition-of-done.md`
+
+- `docs/process/sprint-1-checklist.md`
+
+- `docs/process/backlog-updated.md`
+
+  
+
+### Architecture
+
+  
+
+- `docs/architecture/microservice-architecture.md`
+
+- `docs/architecture/system-requirements.md`
+
+- `docs/architecture/non-functional-requirements.md`
+
+- `docs/architecture/resilience-patterns.md`
+
+- `docs/architecture/event-driven-architecture.md`
+
+- `docs/architecture/cqrs-and-consistency.md`
+
+- `docs/architecture/data-storage-strategy.md`
+
+  
+
+### Operations
+
+  
+
+- `docs/observability/observability-strategy.md`
+
+- `docs/deployment/devops-ci-cd-gitops.md`
+
+- `docs/deployment/kubernetes-strategy.md`
+
+- `docs/security/security-strategy.md`
+
+- `docs/testing/testing-strategy.md`
+
+  
+
+### ADR
+
+  
+
+- `docs/adr/ADR-001-use-microservices.md`
+
+- `docs/adr/ADR-002-use-postgresql-redis-elasticsearch-s3.md`
+
+- `docs/adr/ADR-003-use-rabbitmq-and-document-kafka.md`
+
+- `docs/adr/ADR-004-add-couchbase-as-nosql-learning-track.md`
+
+- `docs/adr/ADR-005-use-kubernetes-and-argocd.md`
