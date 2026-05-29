@@ -36,11 +36,11 @@ fmt:
 	fi
 
 docker-up:
-	docker compose -f deployments/docker-compose/docker-compose.yml up -d
+	docker compose -p beatflow --env-file .env -f deployments/docker-compose/docker-compose.yml up -d
 
 docker-down:
-	docker compose -f deployments/docker-compose/docker-compose.yml down
-
+	docker compose -p beatflow --env-file .env -f deployments/docker-compose/docker-compose.yml down
+	
 migrate-up:
 	@echo "migrate-up placeholder: Goose migrations will be added later"
 
