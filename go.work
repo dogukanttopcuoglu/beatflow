@@ -1,0 +1,7 @@
+go 1.26.3
+
+use (
+	./apps/auth-service
+	./packages/go/config
+	./packages/go/logger
+)

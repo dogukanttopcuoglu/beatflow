@@ -1,0 +1,26 @@
+# Go
+bin/
+*.test
+coverage.out
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+
+# Build
+dist/
+tmp/
