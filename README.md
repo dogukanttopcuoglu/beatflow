@@ -117,3 +117,7 @@ make docker-up
 make docker-down
 make migrate-up
 make migrate-down
+
+## Project Tracking
+
+- [Sprint 1 Checklist](docs/process/sprint-1-checklist.md)
