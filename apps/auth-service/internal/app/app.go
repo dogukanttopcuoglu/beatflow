@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/dogukanttopcuoglu/beatflow/apps/auth-service/internal/config"
+	"github.com/dogukanttopcuoglu/beatflow/apps/auth-service/internal/handler/health"
 	"github.com/gofiber/fiber/v2"
 	"go.uber.org/zap"
 )
@@ -19,6 +20,9 @@ func New(cfg config.Config, logger *zap.Logger) *App {
 	server := fiber.New(fiber.Config{
 		AppName: cfg.Service.Name,
 	})
+
+	healthHandler := health.NewCheckHandler(cfg.Service.Name)
+	health.RegisterRoutes(server, healthHandler)
 
 	return &App{
 		cfg:    cfg,
