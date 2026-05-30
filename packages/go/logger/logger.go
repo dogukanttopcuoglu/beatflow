@@ -38,6 +38,7 @@ func New(opts Options) (*zap.Logger, error) {
 	case "development", "dev", "local":
 		cfg = zap.NewDevelopmentConfig()
 		cfg.Level = zap.NewAtomicLevelAt(level)
+		cfg.EncoderConfig.EncodeTime = zapcore.TimeEncoderOfLayout("15:04:05")
 	default:
 		cfg = productionConfig(level)
 	}
